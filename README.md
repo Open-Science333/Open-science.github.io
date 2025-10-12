@@ -19,7 +19,7 @@ Here, science isn’t just reported — it’s *interpreted.*
 ---
 
 ## 🧾 Featured Article  
-### [Copper–Nickel: The Classic Alloy Reimagined for the Future of Energy](Copper–Nickel)
+### [Copper–Nickel: The Classic Alloy Reimagined for the Future of Energy](Copper–Nickel.md)
 *By [Your Name], October 2025*  
 
 > How nanoscale engineering turned two ancient metals into a new source of electricity.  
