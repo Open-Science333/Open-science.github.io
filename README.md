@@ -43,7 +43,7 @@ We believe that every discovery deserves an audience — not just experts, but e
 
 ## 🧭 Connect  
 - 📖 [About the Project](About us.md)  
-- 💬 [Submit or Suggest a Paper](volunteer.html)  
+- 💬 [Submit or Suggest a Paper](volunteeer.html)  
 - 🧰 Built on **GitHub Pages**  
 
 ---
