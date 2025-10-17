@@ -3,263 +3,294 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copper–Nickel: The Classic Alloy Reimagined for the Future of Energy | The Research Rewrite</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Copper–Nickel: The Classic Alloy Reimagined | Open Science</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", system-ui, sans-serif;
+      color: #1a1a1a;
+      background-color: #fcfcfc;
+      line-height: 1.7;
       margin: 0;
-      background: #f9fbff;
-      color: #222;
+      padding: 0;
     }
 
+    /* Header Navigation */
     header {
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      background: #0a2540;
+      color: white;
       padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      z-index: 10;
     }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #0077ff;
-      text-decoration: none;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+    nav {
       display: flex;
+      align-items: center;
       gap: 1rem;
     }
-
-    nav ul li {
-      position: relative;
-    }
-
     nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #0077ff;
-    }
-
-    .dropdown {
-      position: absolute;
-      top: 2rem;
-      left: 0;
-      background: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: none;
-      flex-direction: column;
-      min-width: 200px;
-    }
-
-    .dropdown a {
-      padding: 0.8rem 1rem;
-      display: block;
-      color: #333;
-    }
-
-    li:hover .dropdown {
-      display: flex;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      background: url('https://upload.wikimedia.org/wikipedia/commons/e/e7/Copper-nickel_alloy_microstructure.jpg') center/cover no-repeat;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.3);
-    }
-
-    .hero-text {
-      position: absolute;
-      bottom: 2rem;
-      left: 2rem;
       color: white;
-      z-index: 2;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      font-weight: 500;
+      position: relative;
+      transition: opacity 0.3s ease;
+    }
+    nav a:hover {
+      opacity: 0.8;
     }
 
-    .hero-text h1 {
-      font-size: 2.4rem;
-      margin: 0;
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #ffffff;
+      min-width: 220px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      z-index: 1000;
+      top: 2.5rem;
+      left: 0;
+      padding: 0.5rem 0;
+    }
+    .dropdown-content a {
+      color: #0a2540;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    .dropdown-content a:hover {
+      background-color: #eef3fa;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
-    .hero-text p {
-      margin: 0.5rem 0 0;
-      font-size: 1.1rem;
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      background: linear-gradient(135deg, #e9f0ff, #f9fbff);
+      animation: fadeIn 1.2s ease;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #0a2540;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: #333;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
+    /* Main Article */
     main {
       max-width: 850px;
       margin: 3rem auto;
-      padding: 0 1rem;
-      line-height: 1.7;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      padding: 2.5rem;
-    }
-
-    h2 {
-      color: #0077ff;
-      margin-top: 2.5rem;
-    }
-
-    p {
-      color: #333;
+      padding: 0 1.5rem;
       font-size: 1.05rem;
+      animation: fadeIn 1.5s ease;
     }
-
+    h2 {
+      color: #0a2540;
+      margin-top: 2.5rem;
+      font-size: 1.4rem;
+    }
     ul {
-      list-style: disc;
-      margin-left: 1.5rem;
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 0.4rem 0;
+    }
+    p {
+      margin-bottom: 1.2rem;
     }
 
-    .highlight {
-      color: #0077ff;
+    /* Read Next Section */
+    .read-next {
+      background: #eef3fa;
+      padding: 3rem 2rem;
+      border-radius: 12px;
+      margin: 4rem auto;
+      max-width: 850px;
+      text-align: center;
+    }
+    .read-next h2 {
+      color: #0a2540;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .next-article {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .next-article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+    .next-article h3 {
+      color: #0a2540;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .next-article p {
+      color: #333;
+      font-size: 0.95rem;
+    }
+    .next-article a {
+      text-decoration: none;
+      color: #0a2540;
       font-weight: 600;
     }
 
+    /* Footer */
     footer {
-      background: #f3f8ff;
-      padding: 2rem;
+      background: #0a2540;
+      color: #ccc;
       text-align: center;
+      padding: 2rem;
       font-size: 0.9rem;
-      color: #555;
       margin-top: 3rem;
     }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
 
-    @media (max-width: 700px) {
-      .hero {
-        height: 250px;
-      }
-      .hero-text h1 {
-        font-size: 1.6rem;
-      }
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-
 <body>
 
   <header>
-    <a href="index.html" class="logo">The Research Rewrite</a>
+    <h2>Open Science</h2>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li>
-          <a href="#">Explore ▾</a>
-          <div class="dropdown">
-            <a href="#">The Human Lens</a>
-            <a href="#">The Planet & Beyond</a>
-            <a href="#">The Tech Frontier</a>
-            <a href="#">The Mind Explained</a>
-            <a href="#">Science in Society</a>
-            <a href="#">The Cutting Edge</a>
-          </div>
-        </li>
-        <li><a href="volunteer.html">Volunteer</a></li>
-      </ul>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+
+      <!-- Dropdown Menu -->
+      <div class="dropdown">
+        <a href="#">Explore ▾</a>
+        <div class="dropdown-content">
+          <a href="energy.html">Energy & Materials</a>
+          <a href="biology.html">Biology & Life Sciences</a>
+          <a href="space.html">Astronomy & Space</a>
+          <a href="ai.html">AI & Data Science</a>
+          <a href="climate.html">Climate & Environment</a>
+          <a href="medicine.html">Medicine & Health</a>
+        </div>
+      </div>
+
+      <a href="volunteer.html">Volunteer</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-text">
-      <h1>Copper–Nickel: The Classic Alloy Reimagined for the Future of Energy</h1>
-      <p>By [Your Name] • October 2025</p>
-    </div>
+    <h1>Copper–Nickel: The Classic Alloy Reimagined for the Future of Energy</h1>
+    <p>By Chakir Achraf • October 2025</p>
+    <img src="https://media.istockphoto.com/id/525078635/photo/old-american-coins.jpg?s=612x612&w=0&k=20&c=xXjVOhHe1xLA4zqPpri-uufZwEV_Gcp4OfHIegnOBdY=" alt="Copper and Nickel Alloy">
   </section>
 
   <main>
-    <p><strong>Every second, engines, factories, and data centers breathe out waves of unused heat — invisible rivers of lost energy. Now imagine if we could turn that waste into power.</strong></p>
+    <p><strong>Every second, engines, factories, and data centers breathe out waves of unused heat, massive rivers of wasted energy. Imagine if we could turn that waste into power.</strong></p>
+    <p>That’s exactly what a group of materials scientists set out to do. Their secret? A surprising comeback for two of humanity’s oldest metals — <strong>copper and nickel</strong>, reinvented at the nanoscale.</p>
 
-    <p>That’s exactly what a group of materials scientists set out to do. Their secret? A surprising comeback for one of humanity’s oldest metallic duos: <span class="highlight">copper and nickel</span>, reinvented at the nanoscale.</p>
-
-    <h2>🔥 The Challenge: When Heat Becomes Waste</h2>
-    <p>Thermoelectric materials can turn heat directly into electricity. The technology has existed for decades — but the best materials are often fragile, toxic, or ridiculously expensive.</p>
-
-    <p>To make a real-world impact, the next generation of thermoelectrics must check three boxes:</p>
+    <h2>🔥 Heat is Waste</h2>
+    <p>Thermoelectric materials can turn heat directly into electricity. The technology has existed for decades, but most efficient materials are fragile, toxic, or prohibitively expensive.</p>
     <ul>
-      <li>Stable at high temperatures</li>
-      <li>Affordable at scale</li>
-      <li>Efficient enough to matter</li>
+      <li>⚙️ Stable at high temperatures</li>
+      <li>💰 Affordable at scale</li>
+      <li>⚡ Efficient enough to matter</li>
+    </ul>
+    <p>Copper and nickel already satisfy the first two. The challenge? They’re not naturally great at converting heat into power — yet.</p>
+
+    <h2>🔬 Shrinking the Metal World</h2>
+    <p>Researchers created <strong>nanopowders</strong> of copper and nickel, each particle a thousand times smaller than a grain of sand, and fused them using <strong>spark plasma sintering</strong>, an electric process that binds nanoparticles without fully melting them.</p>
+
+    <h2>🧪 Tin & Tungsten</h2>
+    <p>To enhance performance, the team added trace amounts of <strong>tin (Sn)</strong> and <strong>tungsten (W)</strong>.</p>
+    <ul>
+      <li>🔹 <strong>Tin</strong> stabilized the alloy’s structure and improved electrical consistency.</li>
+      <li>🔹 <strong>Tungsten</strong> disrupted heat flow while allowing electrons to move freely.</li>
     </ul>
 
-    <p>Copper and nickel already cover the first two. The catch? They aren’t great at converting heat into power — at least, not yet.</p>
-
-    <h2>🧪 The Breakthrough: Shrinking the Metal World</h2>
-    <p>Instead of melting big chunks of metal, researchers started small — really small. They created <strong>nanopowders</strong> of copper and nickel, each grain a thousand times tinier than a grain of sand.</p>
-
-    <p>These powders were fused using <strong>spark plasma sintering</strong> — a kind of electric “welding” that binds the nanoparticles together without melting them entirely.</p>
-
-    <p>At this scale, metal isn’t just metal anymore — it’s a playground for electrons and heat. Scientists can tweak grain boundaries, atomic defects, and crystal orientation to sculpt how heat and electricity move inside.</p>
-
-    <h2>⚙️ The Secret Ingredients: Tin & Tungsten</h2>
-    <p>To push performance further, the team added two guest elements in tiny amounts: <strong>tin (Sn)</strong> and <strong>tungsten (W)</strong>.</p>
-
-    <ul>
-      <li>Tin helped stabilize the structure and smooth out electrical flow.</li>
-      <li>Tungsten scattered phonons (tiny vibrations that carry heat) while letting electrons zip through.</li>
-    </ul>
-
-    <p>The result was an alloy that let electricity flow freely but blocked heat — exactly what’s needed in a thermoelectric.</p>
-
-    <p>In their best sample, this Cu–Ni–Sn–W combo achieved a <strong>threefold increase in power factor</strong> compared to the plain Cu–Ni alloy. Not bad for four elements you can find on any industrial shelf.</p>
-
-    <h2>🧱 From Lab to Factory Floor</h2>
-    <p>The beauty of this breakthrough isn’t just the performance — it’s the practicality. All the ingredients — copper, nickel, tin, tungsten — are common, cheap, and already used in manufacturing.</p>
-
-    <p>That means this material doesn’t live in a vacuum. It can scale fast, potentially sliding right into existing production lines for automotive parts, turbines, or electronics.</p>
-
-    <p>Even better, the alloy stays stable at the scorching temperatures found in industrial exhausts — perfect for waste-heat recovery systems.</p>
+    <h2>🏭 From Lab to Factory Floor</h2>
+    <p>All four ingredients (Cu, Ni, Sn, W) are abundant, affordable, and already used across industries. This makes large-scale production feasible and cost-effective.</p>
 
     <h2>🌍 Why It Matters</h2>
-    <p>For most of us, copper and nickel are just coins or wiring. But this study shows how re-examining old materials through a modern lens can unlock new frontiers.</p>
-
     <ul>
-      <li>For the <strong>engineer</strong>: a recipe for affordable thermoelectrics without rare or toxic elements.</li>
-      <li>For the <strong>scientist</strong>: a roadmap for tuning materials atom-by-atom.</li>
-      <li>For the <strong>reader</strong>: a reminder that innovation isn’t always about inventing something new — sometimes, it’s about seeing the familiar differently.</li>
+      <li>⚙️ For engineers: a roadmap for affordable thermoelectrics.</li>
+      <li>🧠 For scientists: a way to tune materials atom-by-atom.</li>
+      <li>📖 For readers: a reminder that innovation starts by rethinking the familiar.</li>
     </ul>
 
     <h2>🚀 The Road Ahead</h2>
-    <p>If scaled successfully, Cu–Ni thermoelectrics could transform how we handle waste heat.</p>
-
     <ul>
-      <li>Cars that recharge themselves while driving</li>
-      <li>Data centers that power their own cooling</li>
-      <li>Smartphones that reclaim heat to extend battery life</li>
+      <li>🚗 Cars that recharge themselves</li>
+      <li>💻 Data centers that power their own cooling</li>
+      <li>📱 Smartphones that recycle heat</li>
     </ul>
-
-    <p>It’s not science fiction — it’s the next quiet revolution in energy efficiency.  
-    A future where <strong>every degree of heat counts</strong>.</p>
-
-    <p style="font-size: 0.9rem; color: #666; margin-top: 2rem;">📸 Image Credit: Copper–Nickel Alloy Microstructure — Wikimedia Commons (CC License)</p>
+    <p>This isn’t science fiction, it’s the next quiet revolution in energy efficiency. A future where <strong>every degree of heat counts.</strong></p>
   </main>
 
+  <!-- READ NEXT SECTION -->
+  <section class="read-next">
+    <h2>🔭 Read Next</h2>
+    <div class="articles-grid">
+      <div class="next-article">
+        <h3>Beyond Batteries: The New Energy Scavengers</h3>
+        <p>How materials engineers are designing self-powered systems that harvest energy from the environment.</p>
+        <a href="beyond-batteries.html">→ Read More</a>
+      </div>
+
+      <div class="next-article">
+        <h3>From Sand to Silicon: The Quiet Revolution of Sustainable Electronics</h3>
+        <p>Inside the green transformation of semiconductor manufacturing — and what comes after silicon.</p>
+        <a href="sand-to-silicon.html">→ Read More</a>
+      </div>
+
+      <div class="next-article">
+        <h3>When Heat Becomes Power</h3>
+        <p>How thermoelectrics could redefine waste management and renewable energy across industries.</p>
+        <a href="when-heat-becomes-power.html">→ Read More</a>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    © 2025 The Research Rewrite • Created by [Your Name]  
-    <br>
-    Free knowledge for an intelligent world.
+    © 2025 The Research Rewrite • Created by Chakir Achraf  
+    <br>Free knowledge for an intelligent world.
   </footer>
 
 </body>
