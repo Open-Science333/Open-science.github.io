@@ -3,128 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Join the Science Story | [Open science]</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Join the Science Story | The Research Rewrite</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f8fbff 0%, #eef6ff 100%);
+      font-family: "Inter", system-ui, sans-serif;
       color: #222;
+      background-color: #fdfdfd;
+      line-height: 1.7;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
     header {
-      padding: 4rem 1rem 2rem;
+      background: #0a2540;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(135deg, #e0ecff, #f6f9ff);
+    }
+    .hero h1 {
+      font-size: 2.6rem;
       margin-bottom: 1rem;
       color: #0a2540;
     }
-    p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-      line-height: 1.6;
-      color: #333;
-    }
-    .cta-button {
-      display: inline-block;
-      background-color: #0077ff;
-      color: white;
-      font-weight: 600;
-      padding: 1rem 2rem;
-      border-radius: 999px;
-      text-decoration: none;
-      transition: all 0.3s ease;
+    .hero p {
       font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
     }
-    .cta-button:hover {
-      background-color: #005ad1;
-      transform: scale(1.05);
+    .hero .cta-button {
+      background: #0a2540;
+      color: white;
+      padding: 0.9rem 1.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .hero .cta-button:hover {
+      background: #133a66;
+    }
+    main {
+      max-width: 850px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
     }
     section {
-      padding: 2rem 1rem 4rem;
+      margin-bottom: 3rem;
     }
-    .highlight {
-      color: #0077ff;
-      font-weight: 700;
+    h2 {
+      color: #0a2540;
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 0.3rem 0;
     }
     footer {
+      background: #0a2540;
+      color: #ccc;
+      text-align: center;
       padding: 2rem;
-      background: #f3f8ff;
-      color: #555;
       font-size: 0.9rem;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Join the Science Story</h1>
-    <p>
-      Science isn’t just for scientists — it’s for everyone.  
-      At <span class="highlight">Open Science</span>, we turn complex research into stories that spark curiosity, inspire discovery, and connect people with the world of science.
-    </p>
+    <h2>The Research Rewrite</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#">Explore ▾</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>🧠 Contribute. Create. Collaborate.</h2>
-    <p>
-      Whether you’re a student, researcher, artist, or just curious about the universe —  
-      your voice matters.  
-      We’re building a community of volunteers who:
-    </p>
-    <p>
-      ✍️ <b>Write simplified versions</b> of research papers<br>
-      🧩 <b>Suggest topics</b> or categories for future issues<br>
-      🧪 <b>Ask questions</b> or submit deep-dive ideas<br>
-      🖼️ <b>Gather visuals</b> or design infographics<br>
-      🗣️ <b>Join discussions</b> and editorial teams  
-    </p>
+  <div class="hero">
+    <h1>Join the Science Story</h1>
+    <p>Science isn’t just for scientists — it’s for everyone. At <strong>The Research Rewrite</strong>, we turn complex research into stories that spark curiosity, inspire discovery, and connect people with the world of science.</p>
+    <a href="YOUR_GOOGLE_FORM_LINK_HERE" class="cta-button">🌟 Join the Mission</a>
+  </div>
 
-    <p>
-      Your contribution can make science more human, more visible, and more exciting for thousands of readers.
-    </p>
+  <main>
+    <section>
+      <h2>🧠 Contribute. Create. Collaborate.</h2>
+      <p>Whether you’re a student, researcher, artist, or simply curious about the universe — your voice matters. We’re building a global community of volunteers who:</p>
+      <ul>
+        <li>✍️ Write simplified versions of research papers</li>
+        <li>🧩 Suggest topics or categories for future issues</li>
+        <li>🧪 Ask questions or submit deep-dive ideas</li>
+        <li>🖼️ Gather visuals or design infographics</li>
+        <li>🗣️ Join discussions and editorial teams</li>
+      </ul>
+      <p>Your contribution can make science more human, more visible, and more exciting for thousands of readers.</p>
+    </section>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScf2JZ7AGbWa3VzOJ1dTxPyv_irMRsgYlgVTUGib1iTyxWI5g/viewform?usp=header" target="_blank" class="cta-button">
-      🌟 Start Here — Join the Mission
-    </a>
-  </section>
+    <section>
+      <h2>🌍 Why We’re Doing This</h2>
+      <p>Every week, thousands of research papers are published — but most never reach the people they could inspire. We believe science becomes truly powerful when it’s shared as a story. By joining, you help bridge the gap between discovery and understanding.</p>
+    </section>
 
-  <section>
-    <h2>🌍 Why We’re Doing This</h2>
-    <p>
-      Every week, thousands of research papers are published —  
-      but most never reach the people they could inspire.  
-      We believe science becomes truly powerful when it’s shared as a story.  
-      By joining, you’re helping bridge the gap between discovery and understanding.
-    </p>
-  </section>
-
-  <section>
-    <h2>📬 What Happens After You Submit</h2>
-    <p>
-      Once you fill the form, our editorial team will reach out to you personally.  
-      Depending on your interests, you’ll be invited to:
-    </p>
-    <p>
-      💡 Write, edit, or design science content<br>
-      🔍 Suggest papers or interview ideas<br>
-      🗞️ Help review, fact-check, or visualize stories  
-    </p>
-    <p>
-      You can contribute as little or as much as you want — from a single idea to a recurring column.
-    </p>
-  </section>
+    <section>
+      <h2>📬 What Happens After You Submit</h2>
+      <p>Once you fill the form, our editorial team will reach out personally. Depending on your interests, you’ll be invited to:</p>
+      <ul>
+        <li>💡 Write, edit, or design science content</li>
+        <li>🔍 Suggest papers or interview ideas</li>
+        <li>🗞️ Help review, fact-check, or visualize stories</li>
+      </ul>
+      <p>You can contribute as little or as much as you want — from a single idea to a recurring column.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>
-      © Open Science • Making Science Simple, Human, and Inspiring  
-    </p>
+    © 2025 The Research Rewrite • Created by Chakir Achraf  
+    <br /> Free knowledge for an intelligent world.  
   </footer>
-
 </body>
 </html>
+
