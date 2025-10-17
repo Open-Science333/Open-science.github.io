@@ -1,238 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Research Rewrite | Where Science Meets Storytelling</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f9fbff;
-      color: #222;
-    }
-
-    header {
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: #0077ff;
-      text-decoration: none;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 1rem;
-    }
-
-    nav ul li {
-      position: relative;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #0077ff;
-    }
-
-    .dropdown {
-      position: absolute;
-      top: 2rem;
-      left: 0;
-      background: white;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: none;
-      flex-direction: column;
-      min-width: 200px;
-    }
-
-    .dropdown a {
-      padding: 0.8rem 1rem;
-      display: block;
-      color: #333;
-    }
-
-    li:hover .dropdown {
-      display: flex;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      line-height: 1.7;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      color: #0a2540;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      color: #0077ff;
-      margin-top: 2.5rem;
-    }
-
-    p {
-      color: #333;
-      font-size: 1.05rem;
-    }
-
-    .highlight {
-      color: #0077ff;
-      font-weight: 600;
-    }
-
-    .article {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      padding: 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .article h3 {
-      margin-top: 0;
-      color: #0a2540;
-    }
-
-    .article small {
-      color: #555;
-    }
-
-    .cta {
-      display: inline-block;
-      background: #0077ff;
-      color: white;
-      padding: 0.8rem 1.6rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-    }
-
-    .cta:hover {
-      background: #005ad1;
-      transform: scale(1.05);
-    }
-
-    footer {
-      background: #f3f8ff;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-      margin-top: 3rem;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Science</title>
+  <meta name="description" content="The Research Rewrite: Where Science Meets Storytelling. Turning academic research into ideas that inspire engineers, researchers, and the endlessly curious.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="favicon.ico">
 </head>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-<body>
-
-  <header>
-    <a href="index.html" class="logo">The Research Rewrite</a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li>
-          <a href="#">Explore ▾</a>
-          <div class="dropdown">
-            <a href="#">The Human Lens</a>
-            <a href="#">The Planet & Beyond</a>
-            <a href="#">The Tech Frontier</a>
-            <a href="#">The Mind Explained</a>
-            <a href="#">Science in Society</a>
-            <a href="#">The Cutting Edge</a>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-blue-700">🧠 Open Science</a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <div class="relative group inline-block">
+          <button class="hover:text-blue-600">Explore ▾</button>
+          <div class="absolute hidden group-hover:block bg-white border rounded-lg shadow-lg mt-2 w-40">
+            <a href="#" class="block px-4 py-2 hover:bg-blue-50">Physics</a>
+            <a href="#" class="block px-4 py-2 hover:bg-blue-50">Biology</a>
+            <a href="#" class="block px-4 py-2 hover:bg-blue-50">Mathematics</a>
+            <a href="#" class="block px-4 py-2 hover:bg-blue-50">Economics</a>
+            <a href="#" class="block px-4 py-2 hover:bg-blue-50">Humanities</a>
           </div>
-        </li>
-        <li><a href="volunteer.html">Volunteer</a></li>
-        <li><a href="#connect">Connect</a></li>
-      </ul>
-    </nav>
-  </header>
+        </div>
+        <a href="volunteer.html" class="hover:text-blue-600">Volunteer</a>
+        <a href="#connect" class="hover:text-blue-600">Connect</a>
+      </div>
+      <button id="loginBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</button>
+    </div>
+  </nav>
 
-  <main>
-    <h1>🧠 The Research Rewrite</h1>
-    <h3><em>Where Science Meets Storytelling.</em></h3>
-    <p>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-blue-50 to-white text-center py-20 px-6">
+    <h1 class="text-5xl font-extrabold mb-4 text-blue-700">Where Science Meets Storytelling.</h1>
+    <p class="text-lg max-w-2xl mx-auto text-gray-600">
       Turning academic research into ideas that inspire engineers, researchers, and the endlessly curious.
     </p>
+    <button id="signupBtn" class="mt-8 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">Join the Rewrite →</button>
+  </section>
 
-    <h2>🌍 About This Journal</h2>
-    <p>
+  <!-- Featured Article -->
+  <section class="max-w-5xl mx-auto my-16 px-6">
+    <h2 class="text-3xl font-semibold mb-6">🧾 Featured Article</h2>
+    <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row">
+      <img src="images/copper-nickel.jpg" alt="Copper Nickel Alloy" class="w-full md:w-1/2 object-cover">
+      <div class="p-6 md:w-1/2">
+        <h3 class="text-2xl font-bold mb-2 text-blue-700">Copper–Nickel: The Classic Alloy Reimagined for the Future of Energy</h3>
+        <p class="text-gray-600 mb-4">How nanoscale engineering turned two ancient metals into a new source of electricity.</p>
+        <a href="article-copper-nickel.html" class="text-blue-600 font-medium hover:underline">Read Full Article →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="max-w-5xl mx-auto px-6 py-12 bg-gray-100 rounded-2xl">
+    <h2 class="text-3xl font-semibold mb-4">🌍 About This Journal</h2>
+    <p class="text-gray-700 mb-6">
       Every day, thousands of research papers are published — brilliant work, often buried in technical language.
-      <strong>The Research Rewrite</strong> takes those studies and retells them clearly, connecting cutting-edge discoveries
-      to real-world meaning and historical context.
+      <strong>Open Science</strong> takes those studies and retells them clearly, connecting the newest discoveries
+      to real-world meaning, historical context and practical applications to a broader audience of curious and avid readers.
     </p>
 
-    <p><strong>Our audience:</strong></p>
-    <ul>
+    <h3 class="text-xl font-semibold mb-3">Our audience:</h3>
+    <ul class="list-disc ml-6 text-gray-700 space-y-2">
       <li>🧩 Curious readers building their general knowledge</li>
       <li>⚙️ Engineers improving their craft</li>
       <li>☕ Researchers reading with morning coffee</li>
     </ul>
 
-    <p>Here, science isn’t just reported — it’s interpreted.</p>
+    <p class="mt-6 text-gray-700">Here, science isn’t just reported; it’s interpreted.</p>
+  </section>
 
-    <div class="article">
-      <h2>🧾 Featured Article</h2>
-      <h3>Copper–Nickel: The Classic Alloy Reimagined for the Future of Energy</h3>
-      <small>By [Your Name], October 2025</small>
-      <p>
-        How nanoscale engineering turned two ancient metals into a new source of electricity.
-      </p>
-      <a href="nickel-copper.html" class="cta">Read the full article →</a>
+  <!-- Connect -->
+  <footer id="connect" class="bg-white mt-16 py-10 border-t">
+    <div class="max-w-5xl mx-auto text-center text-gray-600">
+      <h3 class="text-xl font-semibold mb-4">🧭 Connect</h3>
+      <p class="mb-4">Explore more or contribute to the project:</p>
+      <div class="flex justify-center space-x-6">
+        <a href="about.html" class="text-blue-600 hover:underline">About the Project</a>
+        <a href="volunteer.html" class="text-blue-600 hover:underline">Submit or Suggest a Paper</a>
+      </div>
+      <p class="mt-6 text-sm">🧰 Built on GitHub Pages</p>
+      <p class="mt-2 text-xs text-gray-500">© 2025 The Research Rewrite • Created by Chakir Achraf<br>Free knowledge for an intelligent reader.</p>
     </div>
-
-    <h2>📚 Upcoming Stories</h2>
-    <ul>
-      <li><strong>Beyond Batteries:</strong> The New Energy Scavengers — How materials engineers are designing self-powered systems.</li>
-      <li><strong>From Sand to Silicon:</strong> The quiet revolution of sustainable electronics.</li>
-      <li><strong>When Heat Becomes Power:</strong> The rebirth of thermoelectrics.</li>
-    </ul>
-
-    <h2>✳️ Our Mission</h2>
-    <p>
-      To make research readable, knowledge shareable, and science unforgettable.
-    </p>
-    <p>
-      We believe that every discovery deserves an audience — not just experts, but everyone who wonders how things work and why they matter.
-    </p>
-
-    <h2 id="connect">🧭 Connect</h2>
-    <ul>
-      <li>📖 <a href="about.html">About the Project</a></li>
-      <li>💬 <a href="volunteeer.html">Submit or Suggest a Paper</a></li>
-      <li>🧰 Built on GitHub Pages</li>
-    </ul>
-  </main>
-
-  <footer>
-    © 2025 The Research Rewrite • Created by [Your Name]  
-    <br>
-    Free knowledge for an intelligent world.
   </footer>
+
+  <!-- Login / Sign Up Modal -->
+  <div id="authModal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white rounded-xl shadow-lg w-96 p-8 relative">
+      <button id="closeModal" class="absolute top-3 right-4 text-gray-500 hover:text-gray-700 text-xl">&times;</button>
+      <h2 class="text-2xl font-bold mb-4 text-blue-700" id="modalTitle">Login</h2>
+      <form id="authForm" class="space-y-4">
+        <input type="email" placeholder="Email" class="w-full border rounded-lg px-4 py-2 focus:ring focus:ring-blue-300" required>
+        <input type="password" placeholder="Password" class="w-full border rounded-lg px-4 py-2 focus:ring focus:ring-blue-300" required>
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Continue</button>
+      </form>
+      <p class="text-sm text-gray-600 mt-4 text-center">
+        Don’t have an account? <a href="#" id="toggleSignup" class="text-blue-600 hover:underline">Sign up</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const loginBtn = document.getElementById('loginBtn');
+    const signupBtn = document.getElementById('signupBtn');
+    const authModal = document.getElementById('authModal');
+    const closeModal = document.getElementById('closeModal');
+    const toggleSignup = document.getElementById('toggleSignup');
+    const modalTitle = document.getElementById('modalTitle');
+
+    loginBtn.addEventListener('click', () => {
+      modalTitle.textContent = "Login";
+      authModal.classList.remove('hidden');
+    });
+
+    signupBtn.addEventListener('click', () => {
+      modalTitle.textContent = "Sign Up";
+      authModal.classList.remove('hidden');
+    });
+
+    closeModal.addEventListener('click', () => {
+      authModal.classList.add('hidden');
+    });
+
+    toggleSignup.addEventListener('click', (e) => {
+      e.preventDefault();
+      modalTitle.textContent = modalTitle.textContent === "Login" ? "Sign Up" : "Login";
+    });
+  </script>
 
 </body>
 </html>
+
