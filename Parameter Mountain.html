@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climbing the Trillion-Parameter Mountain | Open Science</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      color: #1a1a1a;
+      background-color: #fcfcfc;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background: #0a2540;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 220px;
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      z-index: 1000;
+    }
+    .dropdown-content a {
+      color: #0a2540;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+      display: block;
+      font-weight: 500;
+    }
+    .dropdown-content a:hover {
+      background-color: #eef3fa;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+      background: linear-gradient(135deg, #e9f0ff, #f9fbff);
+      animation: fadeIn 1.2s ease;
+    }
+    .hero h1 {
+      font-size: 2.3rem;
+      color: #0a2540;
+      margin-bottom: 0.4rem;
+    }
+    .hero p {
+      font-size: 1rem;
+      color: #333;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 850px;
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Main */
+    main {
+      max-width: 850px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      animation: fadeIn 1.5s ease;
+    }
+    h2 {
+      color: #0a2540;
+      font-size: 1.4rem;
+      margin-top: 2.5rem;
+    }
+    .question {
+      font-weight: 600;
+      color: #0a2540;
+      margin-top: 1.8rem;
+    }
+    .answer {
+      margin-left: 1rem;
+      margin-top: 0.3rem;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: #fff7e6;
+      border-left: 5px solid #ffb300;
+      padding: 1rem 1.5rem;
+      margin: 3rem auto;
+      max-width: 850px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background: #0a2540;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      margin-top: 4rem;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Open Science</h2>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+
+      <div class="dropdown">
+        <a href="#">Explore ▾</a>
+        <div class="dropdown-content">
+          <a href="#">Physics</a>
+          <a href="#">Mathematics</a>
+          <a href="#">Computer Science</a>
+          <a href="#">Biology & Medicine</a>
+          <a href="#">Earth & Space</a>
+          <a href="#">Humanities & Literature</a>
+          <a href="#">Economics</a>
+          <a href="#">Geopolitics & Society</a>
+        </div>
+      </div>
+
+      <a href="volunteer.html">Volunteer</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Climbing the Trillion-Parameter Mountain</h1>
+    <p>Interview with Researcher <strong>Mr. Mohaimenul Azam Khan Raiaan</strong> Deep Dive Series, Made by <strong>Achraf Chakir</strong></span></p>
+    <img src="https://cdn.builtin.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=635,q=80/sites/www.builtin.com/files/2024-05/transformer-neural-networks.jpg">
+  </section>
+
+  <main>
+    <p><em>Large Language Models (LLMs) are reshaping how we process and generate information. In this Deep Dive Q&A, researcher <strong>Mr. Mohaimenul Azam Khan Raiaan</strong> explains how we reached the era of trillion-parameter AI, the challenges ahead, and what it all means for science and society.</em></p>
+
+    <p class="question">Q: To start, how would you define a Large Language Model for our readers?</p>
+    <p class="answer"><strong>Raiaan:</strong> LLMs are massive neural networks trained on vast amounts of text data. They can contain billions, even trillions of parameters, and they learn language patterns through self-supervised learning—predicting missing words in sentences rather than relying on labeled data.</p>
+
+    <p class="question">Q: Why is self-supervised learning such a breakthrough?</p>
+    <p class="answer"><strong>Raiaan:</strong> It eliminates the need for manual labeling, which is time-consuming and limited. Instead, the model teaches itself structure and meaning directly from raw text, enabling training at the scale of the entire Internet.</p>
+
+    <p class="question">Q: Could you briefly trace the evolution from early models to today’s transformers?</p>
+    <p class="answer"><strong>Raiaan:</strong> Early models, like n-grams, could only handle a few words of context. RNNs and LSTMs improved that but struggled with long dependencies due to vanishing gradients. The 2017 transformer architecture changed everything—it introduced self-attention and parallel processing, solving those memory limitations and speeding up training dramatically.</p>
+
+    <p class="question">Q: Let’s unpack that self-attention mechanism.</p>
+    <p class="answer"><strong>Raiaan:</strong> It allows the model to weigh the importance of each word in a sequence relative to every other word, regardless of distance. That’s how it can understand context across sentences—like knowing what “it” refers to in a complex paragraph.</p>
+
+    <p class="question">Q: What distinguishes models like BERT and GPT?</p>
+    <p class="answer"><strong>Raiaan:</strong> BERT is bidirectional—it reads text both forward and backward, ideal for understanding meaning. GPT is autoregressive—it predicts the next word based only on prior text, which makes it powerful for generating coherent, flowing language. Both are transformers but optimized for different purposes.</p>
+
+    <p class="question">Q: We keep hearing about scale. What does going from 100 billion to over a trillion parameters really mean?</p>
+    <p class="answer"><strong>Raiaan:</strong> Scale brings emergent capabilities—skills that weren’t explicitly programmed or trained for, like reasoning, problem-solving, and even zero-shot learning. These abilities emerge only at massive parameter counts.</p>
+
+    <p class="question">Q: That must come with huge computational and environmental costs.</p>
+    <p class="answer"><strong>Raiaan:</strong> Absolutely. Training models like Google’s PaLM with 540 billion parameters required thousands of TPUs running for months. It’s energy-intensive and expensive, which raises sustainability concerns for the field.</p>
+
+    <p class="question">Q: Despite that, what real-world areas are benefitting the most from LLMs?</p>
+    <p class="answer"><strong>Raiaan:</strong> Medicine, education, and finance stand out. GPT-4, for example, performed at a human-expert level on bar exams. In healthcare, models analyze clinical text or assist triage. In business, they automate customer service and even outperform classic financial forecasting models.</p>
+
+    <p class="question">Q: And what about the biggest current challenges?</p>
+    <p class="answer"><strong>Raiaan:</strong> Bias and misinformation are top concerns—these systems learn from human text, so they inherit human biases. Then there’s energy consumption, limited context windows, and the issue of temporality: an LLM’s knowledge freezes at the moment its training data stops. That makes it blind to new events.</p>
+
+    <p class="question">Q: So if an AI trained in 2022 makes decisions in 2025, it’s missing years of new information?</p>
+    <p class="answer"><strong>Raiaan:</strong> Exactly. That’s why integrating real-time retrieval or continual learning is critical. Otherwise, using LLMs for high-stakes decisions—finance, policy, healthcare—could be risky if they rely on outdated data.</p>
+
+    <p class="question">Q: Finally, what should learners and researchers keep in mind as these systems evolve?</p>
+    <p class="answer"><strong>Raiaan:</strong> Stay critical. Understand both their capabilities and constraints. The race toward larger models isn’t just about intelligence—it’s about accountability, sustainability, and how we choose to apply such power responsibly.</p>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      ⚠️ <strong>Disclaimer:</strong> This Q&A is a <em>fictionalized educational summary</em> created for the Open Science “Deep Dive” series.  
+      It is based on our interpretation of the following peer-reviewed publication and does not represent a real interview with the author:
+      <br><br>
+      <em>“A Review on Large Language Models: Architectures, Applications, Taxonomies, Open Issues and Challenges”</em>  
+      by Mohaimenul Azam Khan Raiaan, Md. Saddam Hossain Mukta, Kaniz Fatema, Nur Mohammad Fahad, Sadman Sakib, Most Marufatul Jannat Mim, Jubaer Ahmad, Mohammed Eunus Ali, and Sami Azam.  
+      <br><br>
+      Received 14 January 2024 • Accepted 5 February 2024 • Published 13 February 2024 • Current Version 23 February 2024  
+      <br>
+      DOI: <a href="https://doi.org/10.1109/ACCESS.2024.3365742" target="_blank">10.1109/ACCESS.2024.3365742</a>  
+    </div>
+
+  </main>
+
+  <footer>
+    © 2025 Open Science Journal • Deep Dive Series • Fictionalized Q&A based on IEEE Access research by Mohaimenul Azam Khan Raiaan • Made by <strong>Achraf Chakir</strong></span>
+  </footer>
+
+</body>
+</html>
